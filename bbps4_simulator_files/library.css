@@ -1,0 +1,95 @@
+
+/*--------------------*/
+/* タブ表示関連 ここから */
+/*--------------------*/
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+.tab {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tab li {
+  padding: 8px 12px;
+  transition: background-color .8s;
+  cursor: pointer;
+}
+.tab li:hover, .tab li:focus {
+  background-color: rgb(255, 255, 255);
+}
+.tab li.active {
+  background-color: #ccc;
+}
+
+.content {
+  position: relative;
+  padding: 10px;
+}
+.content section {
+  display: none;
+  animation: fade-in .8s;
+}
+.content section.active {
+  display: block;
+}
+
+.content-vue {
+  border-top: 2px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all .8s;
+}
+
+.v-leave-active {
+  position: absolute;
+}
+
+.v-enter {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.v-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+body {
+  margin: 0px;
+}
+th , td {
+  font-size: 10px;
+}
+@media screen and (max-width:340px) { 
+  th , td {
+    font-size: 1vw;
+  }
+}
+
+/*--------------------*/
+/* タブ表示関連 ここまで */
+/*--------------------*/
+
+.main-section {
+  width : 100%;
+  margin-left: 0%;
+}
